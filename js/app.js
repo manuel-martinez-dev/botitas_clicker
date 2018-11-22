@@ -4,18 +4,26 @@
 
 let clicks = 0;
 
-//document.getElementById('photo').addEventListener('click', function(event){
-  //console.log('clicked')
-//}, false);
+//highlight and click counter
+$(function(){
+  $(".photoB").hover(highlight);
+  $(".photoB").on("click", function(e){
+    console.log('clicked');
+    clicks++;
+    $("#clicksB").html(clicks);
+  })
+});
 
 $(function(){
-  $("img").on("mouseover mouseleave", highlight);
-  $("img").on("click", function(e){
+  $(".photoA").hover(highlight);
+  $(".photoA").on("click", function(e){
+    console.log('clicked');
     clicks++;
-    $("#clicks").html(clicks);
+    $("#clicksA").html(clicks);
   })
 });
 
 function highlight() {
-  $("img").toggleClass("highlighted");
+  $(".photoB").toggleClass("highlighted");
+  $(".photoA").toggleClass("highlighted");
 }
