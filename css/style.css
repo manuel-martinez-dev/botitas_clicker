@@ -17,12 +17,12 @@ width:650px;
   width:650px;
 }
 
-#clicksB{
-  padding: 1em;
+.counter{
   float: right;
+  padding: 1em;
 }
 
-#clicksA{
-  padding: 1em;
-  float:left;
+.restart{
+  cursor: pointer;
+  float: right;
 }
