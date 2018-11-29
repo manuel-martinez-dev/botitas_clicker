@@ -1,5 +1,6 @@
 img{
 border-radius: 20%;
+cursor: pointer;
 height: 450px;
 padding: 10px;
 width:650px;
@@ -18,11 +19,17 @@ width:650px;
 }
 
 .counter{
-  float: right;
+  float: inherit;
   padding: 1em;
 }
 
 .restart{
   cursor: pointer;
-  float: right;
+  float: inherit;
+  padding: 1em;
+}
+
+.photo{
+  height: 80%;
+  width: 60%;
 }

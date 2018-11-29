@@ -6,36 +6,39 @@ let clicksA =0;
 let clicksB =0;
 let displayClicks = document.getElementsByClassName('counter');
 
-let resetClicks = function () {
-  $("#clicksB").html(clicksB);
-  $("#clicksA").html(clicksA);
-}
-
-//highlight and click counter
+//click counter
 $(function(){
-  $(".photoB").hover(highlight);
   $(".photoB").on("click", function(e){
     //console.log('clicked');
     clicksB++;
     $("#clicksB").html(clicksB);
+    $(".photoB").removeClass("highlighted");
   })
 });
 
 $(function(){
-  $(".photoA").hover(highlight);
   $(".photoA").on("click", function(e){
     //console.log('clicked');
     clicksA++;
     $("#clicksA").html(clicksA);
+    $(".photoA").removeClass("highlighted");
   })
 });
+
+//highlights the images by adding a border
 
 function highlight() {
   $(".photoB").toggleClass("highlighted");
   $(".photoA").toggleClass("highlighted");
 }
 
-//it resets to zero but the click counter is not displaying zero
+//redo button on click action
+let resetClicks = function () {
+  $("#clicksB").html(clicksB);
+  $("#clicksA").html(clicksA);
+  $(".photoA").addClass("highlighted");
+  $(".photoB").addClass("highlighted");
+}
 
 $(".restart").click(function(e){
   console.log('zero');

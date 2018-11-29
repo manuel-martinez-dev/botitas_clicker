@@ -6,5 +6,6 @@ Botitas Clicker
 
 this is just a simple cat clicker page.
 
-##TODO
-add a real event once the photo is clicked (maybe change photo).
+## TODO
+
+change photos after each click or maybe after a certain amount of clicks.
